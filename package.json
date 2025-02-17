@@ -15,8 +15,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/vonbearshark/react-donut-chart.git"
-  },´
+    "url": "https://gitlab.com/dev_ik/react-resizable-donut-chart"
+  },
   "files": [
     "dist"
   ],
