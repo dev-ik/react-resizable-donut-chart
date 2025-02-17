@@ -1,0 +1,13 @@
+.root {
+  position: relative;
+  z-index: 9999;
+  .dataPath:hover {
+    cursor: pointer;
+  }
+  .dataPathSelected:hover {
+    cursor: grab;
+  }
+  .dataPathResizing {
+    cursor: grabbing;
+  }
+}
