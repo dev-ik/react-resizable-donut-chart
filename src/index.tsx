@@ -5,43 +5,43 @@ import styles from './index.module.scss';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement!);
-
+const INITIAL_PIE_DATA: ChangePieDataType = {
+  data: [
+    {
+      value: 40,
+      color: '#183342',
+      selected: true,
+      resizing: false,
+    },
+    {
+      value: 26,
+      color: '#0288D1',
+      selected: false,
+      resizing: false,
+    },
+    {
+      value: 10,
+      color: '#BF360C',
+      selected: false,
+      resizing: false,
+    },
+    {
+      value: 13,
+      color: '#F4511E',
+      selected: false,
+      resizing: false,
+    },
+    {
+      value: 11,
+      color: '#F9A825',
+      selected: false,
+      resizing: false,
+    },
+  ],
+  selectedId: 0,
+};
 const App = () => {
-  const [pieData, setPieData] = useState<ChangePieDataType>({
-    data: [
-      {
-        value: 40,
-        color: '#183342',
-        selected: true,
-        resizing: false,
-      },
-      {
-        value: 26,
-        color: '#0288D1',
-        selected: false,
-        resizing: false,
-      },
-      {
-        value: 10,
-        color: '#BF360C',
-        selected: false,
-        resizing: false,
-      },
-      {
-        value: 13,
-        color: '#F4511E',
-        selected: false,
-        resizing: false,
-      },
-      {
-        value: 11,
-        color: '#F9A825',
-        selected: false,
-        resizing: false,
-      },
-    ],
-    selectedId: 0,
-  });
+  const [pieData, setPieData] = useState<ChangePieDataType>(INITIAL_PIE_DATA);
 
   const selectHandler = (index: number) => () => {
     setPieData({
@@ -73,6 +73,28 @@ const App = () => {
             >
               {pieData.data[pieData.selectedId].value.toFixed(2)}%
             </div>
+          </div>
+          <button
+            onClick={() => {
+              setPieData(INITIAL_PIE_DATA);
+            }}
+          >
+            Reset to default
+          </button>
+        </div>
+        <div className={styles.props}>
+          <div className={styles.props_item}>
+            <span>Selected Id</span>: {pieData.selectedId}
+          </div>
+          <div className={styles.props_item}>
+            <span>Is Donut Resize?</span>: {pieData?.isDonutResize?.toString()}
+          </div>
+          <div className={styles.props_item}>
+            <span>Move direction</span>: {pieData?.moveDirection?.toString()}
+          </div>
+          <div className={styles.props_item}>
+            <span>Selected value direction</span>:{' '}
+            {pieData.resizingValue ? `${pieData.resizingValue}%` : ''}
           </div>
         </div>
       </div>

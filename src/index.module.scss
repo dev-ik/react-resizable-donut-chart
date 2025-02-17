@@ -44,6 +44,42 @@
         color: #fff;
       }
     }
+    button {
+      position: absolute;
+      z-index: 99999;
+      top: 65%;
+      left: 29%;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.props {
+  width: 100%;
+  margin: 15px;
+  display: block;
+
+  .props_item {
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    width: 250px;
+
+    padding: 5px;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+
+    span {
+      font-weight: 600;
+      margin-right: 5px;
+    }
   }
 }
 
@@ -99,7 +135,5 @@
       height: 24px;
       border-radius: 12px;
     }
-
   }
-
 }
