@@ -1,4 +1,6 @@
-# react-resizable-donut-chart
+# React resizable donut chart
+
+![Example](https://raw.githubusercontent.com/dev-ik/react-resizable-donut-chart/main/example.gif)
 
 ## Installation
 
