@@ -1,5 +1,7 @@
 # React resizable donut chart
 
+### [Demo](https://react-donut-chart-resizeble.dev-ik.ru/)
+
 ![Example](https://raw.githubusercontent.com/dev-ik/react-resizable-donut-chart/main/example.gif)
 
 ## Installation
